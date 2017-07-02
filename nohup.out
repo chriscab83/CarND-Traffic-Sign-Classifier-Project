@@ -1,0 +1,12 @@
+[I 14:07:34.608 NotebookApp] Serving notebooks from local directory: /home/paperspace/Documents/workspace/udacity/carnd/CarND-Traffic-Sign-Classifier-Project
+[I 14:07:34.608 NotebookApp] 0 active kernels 
+[I 14:07:34.608 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/?token=57d4a4760a1011f0fbba219866264778e1437f30044e4472
+[I 14:07:34.608 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 14:07:34.608 NotebookApp] No web browser found: could not locate runnable browser.
+[C 14:07:34.608 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=57d4a4760a1011f0fbba219866264778e1437f30044e4472
+[I 14:07:40.042 NotebookApp] Interrupted...
+[I 14:07:40.042 NotebookApp] Shutting down kernels
