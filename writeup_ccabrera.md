@@ -21,7 +21,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./writeup_imgs/visualization.jpg "Visualization"
 [image2]: ./writeup_imgs/all_classes.jpg "All Classes"
-[image3]: ./writeup_imgs/all_classdes_preprocessed.jpg "Normalized Dataset"
+[image3]: ./writeup_imgs/all_classes_preprocessed.jpg "Normalized Dataset"
 [image4]: ./writeup_imgs/my_images.jpg "My Images"
 [image5]: ./writeup_imgs/my_imgs_top5.jpg "Prediction Top 5"
 [image14]: ./writeup_imgs/translate.jpg "Shifted"
@@ -69,27 +69,14 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 My first step was pad the dataset by generating images for the under-represented classes.  I generated the images by performing various augmentations including: 
-1. shifting an image on the x and y axis between [-2,2] pixels
 
-![alt text][image14]
-
+1.  shifting an image on the x and y axis between [-2,2] pixels
 2.  rotating an image between [-15,15] degrees
-
-![alt text][image15]
-
 3.  scaling an image between [-2, 2] pixels
-
-![alt text][image16]
-
 4.  and warping the image with opencv's warp affine transform. 
 
-![alt text][image17]
-
-
 The final augmented image looked as follows:
-
 ![alt text][image18]
-
 I generated these images to help prevent the neural net from improperly over training on certain images that were highly represented and also undertraining on images under represented, which could cause the neural net to biasely choose the images it has learned more of.  I ran the augmentation methods over each class until each class had a minimum of 1000 images.
 
 Next, I normalized the entire dataset by first converting the images to the YCrCb color scale to access the intensity channel of the image. I then called opencv's equalize histogram method on that channel to normalize the image across the entirety of the channel. Afterwards, I converted the image back to RGB. Lastely, I divided the entire dataset by 255 to scale the pixel values down to be between [0, 1] rather than [0, 255].
