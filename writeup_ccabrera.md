@@ -76,6 +76,7 @@ My first step was pad the dataset by generating images for the under-represented
 4.  and warping the image with opencv's warp affine transform. 
 
 The final augmented image looked as follows:
+
 ![alt text][image18]
 I generated these images to help prevent the neural net from improperly over training on certain images that were highly represented and also undertraining on images under represented, which could cause the neural net to biasely choose the images it has learned more of.  I ran the augmentation methods over each class until each class had a minimum of 1000 images.
 
@@ -85,7 +86,7 @@ Below is an example of the augmented dataset.
 
 ![alt text][image3]
 
-Performing this normalization helped to bring out features in the images by increasing the contrast in the image. Also, this normalization bring the mean from 78.985 to 0.503 and the standard deviation in the dataset down from 66.89 to 0.354 which should help the neural net perform better. 
+Performing this normalization helped to bring out features in the images by increasing the contrast in the image. Also, this normalization brought the mean from 78.985 to 0.503 and the standard deviation in the dataset down from 66.89 to 0.354 which should help the neural net perform better. 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
