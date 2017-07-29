@@ -70,15 +70,24 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 My first step was pad the dataset by generating images for the under-represented classes.  I generated the images by performing various augmentations including: 
 1. shifting an image on the x and y axis between [-2,2] pixels
+
 ![alt text][image14]
+
 2.  rotating an image between [-15,15] degrees
+
 ![alt text][image15]
+
 3.  scaling an image between [-2, 2] pixels
+
 ![alt text][image16]
+
 4.  and warping the image with opencv's warp affine transform. 
+
 ![alt text][image17]
 
+
 The final augmented image looked as follows:
+
 ![alt text][image18]
 
 I generated these images to help prevent the neural net from improperly over training on certain images that were highly represented and also undertraining on images under represented, which could cause the neural net to biasely choose the images it has learned more of.  I ran the augmentation methods over each class until each class had a minimum of 1000 images.
@@ -158,7 +167,6 @@ Using confolution layers in for this project makes since because they work on im
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are ten German traffic signs that I found on the web:
-
 ![alt text][image4]
 
 The neural net should not have a hard time recognizing most of the images.  However, the extra signs under the slippery road image and general caution image may increase the difficulty on getting a correct prediction.
