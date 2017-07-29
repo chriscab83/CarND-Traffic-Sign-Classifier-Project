@@ -21,8 +21,8 @@ The goals / steps of this project are the following:
 
 [image1]: ./writeup_imgs/visualization.jpg "Visualization"
 [image2]: ./writeup_imgs/all_classes.jpg "All Classes"
-[image3]: ./writeup_imgs/all_classes_preprocessed.jpg "Normalized Dataset"
-[image4]: ./writeup_imgs/my_images.jpg "My Images""
+[image3]: ./writeup_imgs/all_classdes_preprocessed.jpg "Normalized Dataset"
+[image4]: ./writeup_imgs/my_images.jpg "My Images"
 [image5]: ./writeup_imgs/my_imgs_top5.jpg "Prediction Top 5"
 [image14]: ./writeup_imgs/translate.jpg "Shifted"
 [image15]: ./writeup_imgs/rotate.jpg "Rotated"
@@ -83,12 +83,12 @@ My first step was pad the dataset by generating images for the under-represented
 
 4.  and warping the image with opencv's warp affine transform. 
 
-![alt text][image3]
+![alt text][image17]
 
 
 The final augmented image looked as follows:
 
-![alt text][image3]
+![alt text][image18]
 
 I generated these images to help prevent the neural net from improperly over training on certain images that were highly represented and also undertraining on images under represented, which could cause the neural net to biasely choose the images it has learned more of.  I ran the augmentation methods over each class until each class had a minimum of 1000 images.
 
