@@ -83,12 +83,12 @@ My first step was pad the dataset by generating images for the under-represented
 
 4.  and warping the image with opencv's warp affine transform. 
 
-![alt text][image17]
+![alt text][image3]
 
 
 The final augmented image looked as follows:
 
-![alt text][image18]
+![alt text][image3]
 
 I generated these images to help prevent the neural net from improperly over training on certain images that were highly represented and also undertraining on images under represented, which could cause the neural net to biasely choose the images it has learned more of.  I ran the augmentation methods over each class until each class had a minimum of 1000 images.
 
